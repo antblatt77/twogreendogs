@@ -1,8 +1,0 @@
-from django.contrib import admin
-from django.contrib.admin.decorators import register
-
-class MyBlogPageAdmin(admin.ModelAdmin):
-    fields = "__all__"
-
-
-register.site.MyBlogPageAdmin(MyBlogPageAdmin)

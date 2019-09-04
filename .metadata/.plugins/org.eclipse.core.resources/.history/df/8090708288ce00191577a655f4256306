@@ -1,4 +1,0 @@
-from django.contrib import admin
-
-class MyBlogPageAdmin(admin.ModelAdmin):
-    fields = "__all__"

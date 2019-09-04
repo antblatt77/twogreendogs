@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Move &apos;blog_index_page.html, blog_page.html&apos; to &apos;blog&apos;" description="Move 2 resources to &apos;blog&apos;" destination="templates/blog" element1="templates/blog_index_page.html" element2="templates/blog_page.html" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="2" stamp="1566729269208" updateReferences="true"/>
-</session>
