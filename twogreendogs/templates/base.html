@@ -2,33 +2,81 @@
 
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>
-            {% block title %}
-                {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
-            {% endblock %}
-            {% block title_suffix %}
-                {% with self.get_site.site_name as site_name %}
-                    {% if site_name %}- {{ site_name }}{% endif %}
-                {% endwith %}
-            {% endblock %}
-        </title>
-        <meta name="description" content="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        {# Global stylesheets #}
-        <link rel="stylesheet" type="text/css" href="{% static 'css/twogreendogs.css' %}">
-
-        {% block extra_css %}
-            {# Override this in templates to add extra stylesheets #}
-        {% endblock %}
-    </head>
-
+	<head>
+		<meta charset="utf-8" />
+		<title>
+			{% block title %}
+			    {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
+			{% endblock %}
+			{% block title_suffix %}
+			    {% with self.get_site.site_name as site_name %}
+			        {% if site_name %}- {{ site_name }}{% endif %}
+			    {% endwith %}
+			{% endblock %}
+		</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link rel="stylesheet" type="text/css" href="{% static 'css/twogreendogs.css' %}">
+		<style>
+			#date_meta {
+				text-align: right;
+				color: red;
+				font-size: 0.75em;
+				border-bottom: 2px solid black;
+			}
+			
+			#header {
+			  background-image: url('static/media/background_image3.jpg');
+			  background-color: rgba(0,0,0,0.4);
+			}
+			
+			.header {
+			  color: white;
+			  -webkit-animation: mymove1 5s infinite; /* Safari 4.0 - 8.0 */
+			  animation: mymove1 5s infinite;
+			}
+			
+			#images {
+			  border: 1px solid gray;
+			  border-radius: 5px;
+			}
+			
+			#headerB {
+			  width: device-width;
+			  color: red;
+			  -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+			  animation: mymove 5s infinite;
+			}
+			
+			/* Safari 4.0 - 8.0 */
+			@-webkit-keyframes mymove {
+			  50% {color: blue;}
+			}
+			
+			@keyframes mymove {
+			  50% {color: blue;}
+			}
+			
+			/* Safari 4.0 - 8.0 */
+			@-webkit-keyframes mymove1 {
+			  50% {color: red;}
+			}
+			
+			@keyframes mymove1 {
+			  50% {color: green;}
+			}
+		</style>
+	</head>
     <body class="{% block body_class %}{% endblock %}">
-        {% wagtailuserbar %}
+    	{% wagtailuserbar %}
 
+        {% include "base_header.html" %}
+        
         {% block content %}{% endblock %}
+        
+        {% include base_contact_form.html %}
+        
 
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/twogreendogs.js' %}"></script>
@@ -38,7 +86,7 @@
         {% endblock %}
         
         <footer class="footer" role="contentinfo">
-        	<img src="/media/images/sitting_marmite.width-800.png" alt="sitting marmite"/>
+        	<img src="/media/images/sitting_marmite.width-800.png" alt="sitting marmite" style="margin-left: 25px"/>
 		</footer>
     </body>
 </html>

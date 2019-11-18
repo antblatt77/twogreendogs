@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     'modelcluster',
     'taggit',
+    'contact_form',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -155,12 +156,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 SITE_TITLE = "Two Green Dogs"
+MANAGERS = ("Anton Silberblatt", "anton.silberblatt@thegocompany.co.za")
 
 # Wagtail settings
 
 WAGTAIL_SITE_NAME = "twogreendogs"
 
 WAGTAIL_APPEND_SLASH = False
+
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash

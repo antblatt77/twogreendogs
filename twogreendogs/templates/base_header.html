@@ -1,0 +1,17 @@
+<header id="header">
+		<br>
+		{% if "blog" in request.get_full_path %}
+		<div id="headerB">
+			<h1 style="text-align: center; size: 5em;">
+				Two Green Dogs Blogs.......<em>phew!</em>
+			</h1>
+		</div>
+		{% else %}
+		<div class="header">
+			<h1 style="text-align: center; text-shadow: 2px 2px 4px #000000; size: 5em;">
+				Two Green Dogs
+			</h1>
+		</div>
+		{% endif %}
+		<br>		
+</header>

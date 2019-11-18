@@ -7,6 +7,7 @@ verify_ssl = true
 
 [packages]
 wagtail = "*"
+django-contact-form = {extras = ["akismet"],version = "*"}
 
 [requires]
 python_version = "3.7"

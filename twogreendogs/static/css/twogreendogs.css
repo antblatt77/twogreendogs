@@ -1,0 +1,78 @@
+main {
+    display: block; /* For IE11 support */
+}
+
+body {
+    max-width: 960px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0 15px;
+    color: #231f20;
+    font-family: 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+    line-height: 1.25;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 1px solid #e6e6e6;
+    padding: 10px;
+}
+
+.option h4 {
+    font-size: 19px;
+    text-decoration: underline;
+}
+
+@media (max-width: 996px) {
+    body {
+        max-width: 780px;
+    }
+}
+
+@media (max-width: 767px) {
+    .option {
+        flex: 0 0 50%;
+    }
+}
+
+@media (max-width: 599px) {
+    .main {
+        padding: 20px 0;
+    }
+
+    .figure-space {
+        max-width: 200px;
+    }
+
+    .footer {
+        display: block;
+        width: 300px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 360px) {
+    .header-link {
+        max-width: 100px;
+    }
+}
+
+/*#header {background-image: url('static/media/background_image3.jpg');*/
+}
+#headerB {
+  width: device-width;
+  color: red;
+  -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymove 5s infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+  50% {color: blue;}
+}
+
+@keyframes mymove {
+  50% {color: blue;}
+}
