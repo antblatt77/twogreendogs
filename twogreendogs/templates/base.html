@@ -26,58 +26,65 @@
 				border-bottom: 2px solid black;
 			}
 			
+			#sticky {
+				/* position: absolute; */
+			}
+			
 			#header {
-			  background-image: url('static/media/background_image3.jpg');
-			  background-color: rgba(0,0,0,0.4);
+				background-image: url('static/media/background_image3.jpg');
+				background-color: rgba(197,197,197,0.5);
+				border: solid black 2px;
 			}
 			
 			.header {
-			  color: white;
-			  -webkit-animation: mymove1 5s infinite; /* Safari 4.0 - 8.0 */
-			  animation: mymove1 5s infinite;
+				color: white;
+				-webkit-animation: mymove1 5s infinite; /* Safari 4.0 - 8.0 */
+				animation: mymove1 5s infinite;
 			}
 			
 			#images {
-			  border: 1px solid gray;
-			  border-radius: 5px;
+				border: 1px solid gray;
+				border-radius: 5px;
 			}
 			
 			#headerB {
-			  width: device-width;
-			  color: red;
-			  -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
-			  animation: mymove 5s infinite;
+				width: device-width;
+				color: red;
+				text-decoration: shadow;
+				-webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+				animation: mymove 5s infinite;
 			}
 			
 			/* Safari 4.0 - 8.0 */
 			@-webkit-keyframes mymove {
-			  50% {color: blue;}
+				50% {color: blue;}
 			}
 			
 			@keyframes mymove {
-			  50% {color: blue;}
+				50% {color: blue;}
 			}
 			
 			/* Safari 4.0 - 8.0 */
 			@-webkit-keyframes mymove1 {
-			  50% {color: red;}
+				50% {color: red;}
 			}
 			
 			@keyframes mymove1 {
-			  50% {color: green;}
+				50% {color: green;}
 			}
 		</style>
 	</head>
     <body class="{% block body_class %}{% endblock %}">
     	{% wagtailuserbar %}
-
-        {% include "base_header.html" %}
+    	
+    	<nav id="sticky">
+    		<span class="sticky_nav">
+    			{% include "base_header.html" %}
+   			</span>
+    	</nav>
         
         {% block content %}{% endblock %}
         
-        {% include base_contact_form.html %}
-        
-
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/twogreendogs.js' %}"></script>
 
